@@ -1,0 +1,26 @@
+abstarct class persistance{
+abstarct void persist();
+}
+class filePersistence extends persistence{
+void persist(){
+System.out.println("file persists");
+}
+}
+class dadabasePersistence extends persistence{
+void persist(){
+System.out.println("database persists");
+}
+}
+public class ctrl {
+public static void main(String[] args){
+persistence obj=new persistence() {
+@override
+void persist(){
+System.out.println("calling it");
+}
+};
+obj.persist();
+}
+}
+
+
