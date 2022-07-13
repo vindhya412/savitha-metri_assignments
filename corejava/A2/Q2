@@ -1,0 +1,28 @@
+Abstarct Class Employee{
+Abstract Public void Salary();
+}
+Class Manager extends Employee{
+int sal.incentive;
+Pubic Manager(int sal,int incentive){
+this.sal=sal;
+this.incentive=incentive;
+}
+public void Salary(){
+System.out.println("Manager Salary:"+(sal+incentive));
+}
+public int get(){
+return sal+incentive;
+}
+}
+class labour extends Employee{
+int overtime;
+int labour_salary;
+public static void main(String[] args){
+manager m=new manager(500,100);
+labour l=new labour(150,40);
+m.salary();
+l.salary();
+int totalsalary=m.get()l.get();
+System.out.println("total salary of all employees:"+totalSalary);
+}
+}
