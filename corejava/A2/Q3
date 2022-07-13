@@ -1,0 +1,41 @@
+abstarct class bank {
+abstarct public void disp();
+}
+class savings_account extends bank{
+double bal;
+double fd;
+public savings_account(double bal,double fd){
+this.bal=bal;
+this.fd=fd;
+}
+public void disp(){
+System.out.println("total money in saving:"+(bal+fd));
+}
+public double get(){
+return bal+fd;
+}
+}
+class current_account extends bank{
+double bal;
+double cc;
+public current_account(double bal,double cc){
+this.bal=bal;
+this.cc=cc;
+}
+public void disp(){
+System.out.println("total money in current :"+(bal+cc));
+}
+public double get(){
+return bal+cc;
+}
+}
+public class mod {
+public static void main(String[] args){
+saving_account s= new savings_account(30000,4000);
+current_account c= new current_account(500000,20000);
+s.disp();
+c.disp();
+double totalAmount=s.get()+c.get();
+System.out.println("the total money in bank:"+totalamount);
+}
+}
